@@ -1,0 +1,31 @@
+<section>
+    {{#with room}}
+    <h1 class="item">{{name}} - Details</h1>
+    <div class="item padded">
+        <main class="layout right large">
+            <div class="col">
+                <img src="{{imgURL}}" alt="">
+            </div>
+            <div class="content pad-med">
+                <p>City: {{city}}</p>
+                <p>{{description}}</p>
+                <div class="align-center">
+                    <p><strong>Price per night: {{price}}€</strong></p>
+                </div>
+
+                <ul class="catalog">
+                    {{#each facilities}}
+                    <li>{{label}} <img class="facility-icon" src="{{iconUrl}}"></li>
+                    {{/each}}
+                </ul>
+
+                {{#if isOwner}}
+                <a class="action" href="/room/{{_id}}/edit">Edit</a>
+                <a class="action" href="/facility/{{_id}}/decorateRoom">Facilities</a>
+                <a class="action" href="/room/{{_id}}/delete">Delete</a>
+                {{/if}}
+            </div>
+        </main>
+    </div>
+    {{/with}}
+</section>

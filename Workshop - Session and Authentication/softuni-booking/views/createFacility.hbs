@@ -1,0 +1,21 @@
+<section id="create-facility-section" class="">
+    <h1 class="item">New Facility</h1>
+    <main class="item padded align-center">
+        <form class="layout left large" action="/facility/create" method="post">
+        {{#if error}}
+        <div class="error-box">
+            {{#each error.messages}}
+            <p>{{this}}</p>
+            {{/each}}
+        </div>
+        {{/if}}
+            <div class="aligned">
+                <label><span>Label</span><input {{#if error.fields.label}} class="field-error"{{/if}} type="text" name="label" value="{{body.label}}"></label>
+                <label><span>Icon URL</span><input {{#if error.fields.iconUrl}} class="field-error"{{/if}} type="text" name="iconUrl" value="{{body.iconUrl}}"></label>
+            </div>
+            <div class="align-center">
+                <input class="action" type="submit" value="Publish Item">
+            </div>
+        </form>
+    </main>
+</section>
