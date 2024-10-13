@@ -1,0 +1,18 @@
+<section class="create-form-container">
+    <form method="post">
+        <h3>Create Book Review</h3>
+        <label>Title</label>
+        <input type="text" name="title" value="{{book.title}}" class="box" id="">
+        <label>Author</label>
+        <input type="text" name="author" value="{{book.author}}" class="box" id="">
+        <label>Genre</label>
+        <input type="text" name="genre" value="{{book.genre}}" class="box" id="">
+        <label>Stars</label>
+        <input type="number" name="stars" value="{{book.stars}}" class="box" id="">
+        <label>Image</label>
+        <input type="text" name="image" value="{{book.image}}" class="box" id="">
+        <label>Review</label>
+        <textarea class="box" name="review">{{book.review}}</textarea>
+        <input type="submit" value="Create" class="btn">
+    </form>
+</section>
